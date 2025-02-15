@@ -27,7 +27,8 @@ const taskList = {
   taskname: "",
 };
 
-// Add value
+// Add value 
+// Teacher Seyha explain and telling how to write
 document.getElementById("taskForm").addEventListener("submit", (e) => {
   e.preventDefault();
   let taskname = document.getElementById("success").value.trim();
