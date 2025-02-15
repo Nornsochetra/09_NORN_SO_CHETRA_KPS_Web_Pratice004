@@ -71,17 +71,17 @@ document.getElementById("taskForm").addEventListener("submit", (e) => {
     button.parentElement.parentElement.remove();
   }
   document.getElementsByClassName('.btnPending').addEventListener("click", (e) => {
-    let button = e.target; // Get the clicked button
-    let messagePending = button.innerText.trim(); // Get the button text
+    let button = e.target;
+    let messagePending = button.innerText.trim();
 
     if (messagePending === "Pending") {
         button.innerText = "Completed";
-        button.classList.add('bg-green-500'); // New color
-        button.classList.remove('bg-yellow-500'); // Remove old color
+        button.classList.add('bg-green-500');
+        button.classList.remove('bg-yellow-500');
     } else {
         button.innerText = "Pending";
-        button.classList.add('bg-yellow-500'); // Change back to yellow
-        button.classList.remove('bg-green-500'); // Remove green color
+        button.classList.add('bg-yellow-500');
+        button.classList.remove('bg-green-500');
     }
 });
 
