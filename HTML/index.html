@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice 004</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <section class="px-28 flex flex-row py-40 relative">
+      <!-- Task Name -->
+      <form id="taskForm">
+        <div class="mb-6">
+          <h1 class="font-bold text-2xl py-5">Add Task</h1>
+          <label
+            for="success"
+            class="block mb-2 text-sm font-medium text-green-700"
+            >Task Name</label
+          >
+          <input
+            type="text"
+            id="success"
+            class="bg-green-50 border border-green-500 text-green-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-96 p-2.5"
+            placeholder="Enter Task Name"
+          />
+          <p id="input-warning" class="mt-2 text-sm text-red-600"></p>
+        </div>
+
+        <!-- Choose Date -->
+        <div class="relative max-w-sm">
+          <label
+            for="default-datepicker"
+            class="block mb-2 text-sm font-medium text-green-700"
+            >Choose Date</label
+          >
+          <input
+            id="default-datepicker"
+            type="date"
+            class="bg-blue-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+          <p id="choose-date-warning"  class="mt-2 text-sm text-red-600"></p>
+        </div>
+
+        <!-- Priority -->
+        <div class="py-5">
+          <label
+            for="select-option"
+            class="block mb-2 text-sm font-medium text-red-700"
+            >Priority</label
+          >
+          <select
+            id="select-option"
+            class="bg-red-50 border border-red-500 text-red-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-96 p-2.5"
+          >
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+          <p id="priority-warning" class="mt-2 text-sm text-red-600"></p>
+        </div>
+
+        <button
+          id="button-add-new-task"
+          type="submit"
+          class="text-white bg-purple-700 hover:bg-purple-800 font-medium rounded-lg text-sm px-5 py-2.5"
+        >
+          Add New Task
+        </button>
+      </form>
+
+      <!-- Task List -->
+      <h1 class="font-bold text-2xl py-5 absolute left-[600px] top-41">
+        Task List
+      </h1>
+      <div
+        class="absolute overflow-x-auto shadow-md sm:rounded-lg left-[600px] top-64"
+      >
+        <table
+          id="task-Table"
+          class="w-[700px] text-sm text-left text-gray-500"
+        >
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <th class="px-6 py-3">Task Name</th>
+              <th class="px-6 py-3">Due Date</th>
+              <th class="px-6 py-3">Priority</th>
+              <th class="px-6 py-3">Status</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="px-6 py-3">Java</td>
+            <td class="px-6 py-3">2/10/2025</td>
+            <td class="px-6 py-3 text-green-500">Low</td>
+            <td class="px-6 py-3">
+                <button class="text-white bg-yellow-500 px-3 py-2 rounded" onclick="">Pending</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-6 py-3">Web Development</td>
+            <td class="px-6 py-3">2/14/2025</td>
+            <td class="px-6 py-3 text-green-500">Low</td>
+            <td class="px-6 py-3">
+                <button id="btnPending" class="text-white bg-yellow-500 px-3 py-2 rounded" onclick="">Pending</button>
+            </td>
+          </tr>
+          <tbody id="taskBody">
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+  </body>
+  <script src="../JS/index.js"></script>
+</html>
